@@ -1,0 +1,20 @@
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\bin\Debug\WindowsFormsFacturador.exe.config
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\bin\Debug\WindowsFormsFacturador.exe
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\bin\Debug\WindowsFormsFacturador.pdb
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csprojAssemblyReference.cache
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.FormHome.resources
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.Properties.Resources.resources
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csproj.GenerateResource.cache
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csproj.CoreCompileInputs.cache
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.exe
+D:\Daniela_Desarrollo_Software\Diplomado .NET\ModuloFacturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\WindowsFormsFacturador.exe.config
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\WindowsFormsFacturador.exe
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\WindowsFormsFacturador.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csprojAssemblyReference.cache
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.FormHome.resources
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.Properties.Resources.resources
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csproj.GenerateResource.cache
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csproj.CoreCompileInputs.cache
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.exe
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.pdb

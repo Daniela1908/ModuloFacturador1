@@ -1,0 +1,6 @@
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\Entidades\bin\Debug\Entidades.dll
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\Entidades\bin\Debug\Entidades.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\Entidades\obj\Debug\Entidades.dll
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\Entidades\obj\Debug\Entidades.pdb
