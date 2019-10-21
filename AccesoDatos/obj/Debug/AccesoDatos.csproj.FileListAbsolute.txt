@@ -4,3 +4,6 @@ D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\AccesoDatos\obj\Debug\Ac
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\AccesoDatos\obj\Debug\AccesoDatos.dll
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\AccesoDatos\obj\Debug\AccesoDatos.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\AccesoDatos\bin\Debug\Entidades.dll
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\AccesoDatos\bin\Debug\Entidades.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\AccesoDatos\obj\Debug\AccesoDatos.csproj.CopyComplete

@@ -18,3 +18,11 @@ D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\o
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csproj.CoreCompileInputs.cache
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.exe
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.Login.resources
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\Entidades.dll
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\LogicaNegocio.dll
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\AccesoDatos.dll
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\Entidades.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\LogicaNegocio.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\bin\Debug\AccesoDatos.pdb
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csproj.CopyComplete
