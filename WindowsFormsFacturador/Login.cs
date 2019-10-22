@@ -21,7 +21,7 @@ namespace WindowsFormsFacturador
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtUsuario.Text) || 
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text) ||
                 string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 MessageBox.Show("Debe ingresar un usuario y contraseña");
@@ -46,7 +46,7 @@ namespace WindowsFormsFacturador
                 return;
             }
 
-            FormHome formHome = new FormHome();
+            FormHome formHome = new FormHome(loginExitoso);
             formHome.Show();
             this.Hide();
         }

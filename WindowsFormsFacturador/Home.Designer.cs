@@ -44,7 +44,7 @@
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(63, 13);
             this.lblBienvenido.TabIndex = 0;
-            this.lblBienvenido.Text = "Bienvenido!";
+            this.lblBienvenido.Text = "Bienvenido ";
             // 
             // btnFacturador
             // 
@@ -65,6 +65,7 @@
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnClientes
             // 

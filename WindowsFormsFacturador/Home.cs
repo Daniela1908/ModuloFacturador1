@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace WindowsFormsFacturador
 {
     public partial class FormHome : Form
     {
-        public FormHome()
+        private LoginEntidad usuarioLogueado { get; set; }
+
+        public FormHome(LoginEntidad usuarioLogueado)
         {
             InitializeComponent();
+            this.usuarioLogueado = usuarioLogueado;
+
+            lblBienvenido.Text += usuarioLogueado.Nombre + "!";
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            Productos productos = new Productos();
+            productos.Show();
         }
     }
 }
