@@ -28,5 +28,11 @@ namespace WindowsFormsFacturador
             Productos productos = new Productos();
             productos.Show();
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Clientes clientes = new Clientes();
+            clientes.Show();
+        }
     }
 }

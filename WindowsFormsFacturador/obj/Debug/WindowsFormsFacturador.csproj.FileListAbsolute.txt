@@ -28,3 +28,4 @@ D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\b
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.csproj.CopyComplete
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.Productos.resources
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.GestionProducto.resources
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.Clientes.resources
