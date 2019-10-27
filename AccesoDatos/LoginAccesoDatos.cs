@@ -12,7 +12,8 @@ namespace AccesoDatos
 {
     public class LoginAccesoDatos
     {
-        public LoginEntidad IniciarSesion(LoginEntidad loginEntidad) {
+        public LoginEntidad IniciarSesion(LoginEntidad loginEntidad)
+        {
             using (SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString))
             {
                 SqlCommand comando = new SqlCommand();
@@ -44,7 +45,7 @@ namespace AccesoDatos
                     return loginExitoso;
                 }
             }
-                return null;
+            return null;
         }
     }
 }

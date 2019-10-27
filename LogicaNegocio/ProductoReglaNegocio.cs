@@ -10,10 +10,28 @@ namespace LogicaNegocio
 {
     public class ProductoReglaNegocio
     {
-        public List<ProductoEntidad> ObtenerProducto() {
+        public List<ProductoEntidad> ObtenerProductos() {
 
             ProductoAccesoDatos productoAccesoDatos = new ProductoAccesoDatos();
             return productoAccesoDatos.ObtenerProductos();
+        }
+
+        public bool CrearProducto(ProductoEntidad productoEntidad) {
+
+            ProductoAccesoDatos productoAccesoDatos = new ProductoAccesoDatos();
+            return productoAccesoDatos.CrearProducto(productoEntidad);            
+        }
+
+        public ProductoEntidad ObtenerProductoPorCodigo(string codigo) {
+            ProductoAccesoDatos productoAccesoDatos = new ProductoAccesoDatos();
+            return productoAccesoDatos.ObtenerProducto(codigo);
+        }
+
+        public bool ModificarProducto(ProductoEntidad productoEntidad)
+        {
+
+            ProductoAccesoDatos productoAccesoDatos = new ProductoAccesoDatos();
+            return productoAccesoDatos.ModificarProducto(productoEntidad);
         }
     }
 }

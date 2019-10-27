@@ -61,6 +61,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.Text = "daniela@hotmail.com";
             // 
             // txtPassword
             // 
@@ -68,6 +69,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "daniela123";
             // 
             // lblModuloFacturador
             // 

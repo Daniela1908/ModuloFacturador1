@@ -23,15 +23,45 @@ namespace WindowsFormsFacturador
         private void LlenarGridProductos() {
 
             ProductoReglaNegocio productoReglaNegocio = new ProductoReglaNegocio();
-            List<ProductoEntidad> listaProductos = productoReglaNegocio.ObtenerProducto();
+            List<ProductoEntidad> listaProductos = productoReglaNegocio.ObtenerProductos();
 
-            BindingSource bindingSource = new BindingSource(listaProductos, "");
+            dgvProductos.AutoGenerateColumns = false;
+            dgvProductos.DataSource = listaProductos;
+        }
 
-            dgvProductos.DataSource = bindingSource;
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            GestionProducto gestionProducto = new GestionProducto();
+            gestionProducto.ShowDialog();
+        }
 
-            DataGridViewButtonColumn dataGridViewButtonColumn = new DataGridViewButtonColumn();
-            dataGridViewButtonColumn.Text = "Editar";            
-            dgvProductos.Columns.Add(dataGridViewButtonColumn);
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            LlenarGridProductos();
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridView dataGridView = sender as DataGridView;
+
+                if (dataGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+                {
+                    if (e.ColumnIndex == 5)
+                    {
+                        // EDITAR
+                        string codigoProducto = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                        GestionProducto gestionProducto = new GestionProducto(codigoProducto);
+                        gestionProducto.ShowDialog();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
