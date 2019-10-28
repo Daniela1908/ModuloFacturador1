@@ -52,6 +52,12 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCliente.Designer.cs">
+      <DependentUpon>GestionCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCliente.resx">
+      <DependentUpon>GestionCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionProducto.resx">
       <DependentUpon>GestionProducto.cs</DependentUpon>

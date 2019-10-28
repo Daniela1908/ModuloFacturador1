@@ -50,6 +50,7 @@
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnRefrescar
             // 
@@ -59,6 +60,7 @@
             this.btnRefrescar.TabIndex = 1;
             this.btnRefrescar.Text = "Refrescar";
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // dgvClientes
             // 
@@ -76,8 +78,9 @@
             this.dgvClientes.Location = new System.Drawing.Point(31, 76);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(711, 275);
+            this.dgvClientes.Size = new System.Drawing.Size(776, 275);
             this.dgvClientes.TabIndex = 2;
+            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // Documento
             // 
@@ -133,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(834, 450);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.btnNuevo);

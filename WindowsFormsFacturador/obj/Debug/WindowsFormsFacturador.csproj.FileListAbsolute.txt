@@ -29,3 +29,4 @@ D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\o
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.Productos.resources
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.GestionProducto.resources
 D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.Clientes.resources
+D:\Daniela_Desarrollo_Software\Diplomado.NET\Facturador\WindowsFormsFacturador\obj\Debug\WindowsFormsFacturador.GestionCliente.resources

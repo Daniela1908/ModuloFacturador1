@@ -70,8 +70,8 @@ namespace WindowsFormsFacturador
                         LimpiarDatos();
                     }
                 }
-                else {
-
+                else
+                {
                     productoEntidad.Activo = chkActivo.Checked;
                     bool resultado = productoReglaNegocio.ModificarProducto(productoEntidad);
 
@@ -84,7 +84,7 @@ namespace WindowsFormsFacturador
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Se genero un error, detalle: " + ex.Message);
+                MessageBox.Show("Se ha generado un error, detalle: " + ex.Message);
             }
         }
 
@@ -95,6 +95,10 @@ namespace WindowsFormsFacturador
             txtPrecio.Text = string.Empty;
         }
 
+        /// <summary>
+        /// Metodo para validar que se diligencien todos los campos
+        /// </summary>
+        /// <returns></returns>
         private bool ValidarDatos() {
 
             if (string.IsNullOrWhiteSpace(txtCodigoProducto.Text))
@@ -113,7 +117,7 @@ namespace WindowsFormsFacturador
 
             if (string.IsNullOrWhiteSpace(txtPrecio.Text))
             {
-                MessageBox.Show("Favor didligenciar el Precio");
+                MessageBox.Show("Favor didligenciar el Precio.");
                 txtPrecio.Focus();
                 return false;
             }
@@ -122,21 +126,21 @@ namespace WindowsFormsFacturador
 
             if (!decimal.TryParse(txtPrecio.Text, out valorDecimal))
             {
-                MessageBox.Show("El Precio debe ser un número decimal");
+                MessageBox.Show("El Precio debe ser un número decimal.");
                 txtPrecio.Focus();
                 return false;
             }
 
             if (valorDecimal<=0)
             {
-                MessageBox.Show("El precio debe ser mayor que 0");
+                MessageBox.Show("El precio debe ser mayor que 0.");
                 txtPrecio.Focus();
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtExistencia.Text))
             {
-                MessageBox.Show("Favor diligenciar la Existencia");
+                MessageBox.Show("Favor diligenciar la Existencia.");
                 txtExistencia.Focus();
                 return false;
             }
@@ -145,14 +149,14 @@ namespace WindowsFormsFacturador
 
             if (!int.TryParse(txtExistencia.Text, out valorEntero))
             {
-                MessageBox.Show("La existencia debe ser un número entero");
+                MessageBox.Show("La existencia debe ser un número entero.");
                 txtExistencia.Focus();
                 return false;
             }
 
             if (valorEntero<0)
             {
-                MessageBox.Show("La existencia debe ser un entero positivo");
+                MessageBox.Show("La existencia debe ser un entero positivo.");
                 txtExistencia.Focus();
                 return false;
             }
@@ -167,7 +171,7 @@ namespace WindowsFormsFacturador
 
             if (productoConsultado==null)
             {
-                MessageBox.Show("El producto no existe");
+                MessageBox.Show("El producto no existe.");
                 return;
             }
 
@@ -177,6 +181,5 @@ namespace WindowsFormsFacturador
             txtPrecio.Text = productoConsultado.Precio.ToString();
             chkActivo.Checked = productoConsultado.Activo;
         }
-  
     }
 }

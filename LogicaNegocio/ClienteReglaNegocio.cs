@@ -15,5 +15,24 @@ namespace LogicaNegocio
             ClienteAccesoDatos clienteAccesoDatos = new ClienteAccesoDatos();
             return clienteAccesoDatos.ObtenerClientes();
         }
+
+        public bool CrearCliente(ClienteEntidad clienteEntidad) {
+
+            ClienteAccesoDatos clienteAccesoDatos = new ClienteAccesoDatos();
+            return clienteAccesoDatos.CrearCliente(clienteEntidad);
+        }
+
+        public ClienteEntidad ObtenerClientePorDocumento(string documento)
+        {
+            ClienteAccesoDatos clienteAccesoDatos = new ClienteAccesoDatos();
+            return clienteAccesoDatos.ObtenerCliente(documento);
+        }
+
+        public bool ModificarCliente(ClienteEntidad clienteEntidad)
+        {
+
+            ClienteAccesoDatos clienteAccesoDatos = new ClienteAccesoDatos();
+            return clienteAccesoDatos.ModificarCliente(clienteEntidad);
+        }
     }
 }
