@@ -11,7 +11,6 @@ namespace Entidades
         public string CodigoProducto { get; set; }
         public string Detalle { get; set; }
         public decimal Precio { get; set; }
-        public int Existencia { get; set; }
         public bool Activo { get; set; }
     }
 }

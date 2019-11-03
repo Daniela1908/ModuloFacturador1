@@ -43,11 +43,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mNuevo = new System.Windows.Forms.ToolStripMenuItem();
             this.mGuardar = new System.Windows.Forms.ToolStripMenuItem();
-            this.mFacturar = new System.Windows.Forms.ToolStripMenuItem();
-            this.mAnular = new System.Windows.Forms.ToolStripMenuItem();
-            this.mConsultar = new System.Windows.Forms.ToolStripMenuItem();
             this.cbCliente = new System.Windows.Forms.ComboBox();
+            this.btnAdicionarProducto = new System.Windows.Forms.Button();
+            this.dgvListarProductos = new System.Windows.Forms.DataGridView();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumeroFactura
@@ -148,10 +151,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mNuevo,
-            this.mGuardar,
-            this.mFacturar,
-            this.mAnular,
-            this.mConsultar});
+            this.mGuardar});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(692, 24);
@@ -172,24 +172,6 @@
             this.mGuardar.Text = "Guardar";
             this.mGuardar.Click += new System.EventHandler(this.mGuardar_Click);
             // 
-            // mFacturar
-            // 
-            this.mFacturar.Name = "mFacturar";
-            this.mFacturar.Size = new System.Drawing.Size(62, 20);
-            this.mFacturar.Text = "Facturar";
-            // 
-            // mAnular
-            // 
-            this.mAnular.Name = "mAnular";
-            this.mAnular.Size = new System.Drawing.Size(54, 20);
-            this.mAnular.Text = "Anular";
-            // 
-            // mConsultar
-            // 
-            this.mConsultar.Name = "mConsultar";
-            this.mConsultar.Size = new System.Drawing.Size(70, 20);
-            this.mConsultar.Text = "Consultar";
-            // 
             // cbCliente
             // 
             this.cbCliente.Enabled = false;
@@ -199,11 +181,61 @@
             this.cbCliente.Size = new System.Drawing.Size(121, 21);
             this.cbCliente.TabIndex = 14;
             // 
+            // btnAdicionarProducto
+            // 
+            this.btnAdicionarProducto.Enabled = false;
+            this.btnAdicionarProducto.Location = new System.Drawing.Point(41, 165);
+            this.btnAdicionarProducto.Name = "btnAdicionarProducto";
+            this.btnAdicionarProducto.Size = new System.Drawing.Size(124, 23);
+            this.btnAdicionarProducto.TabIndex = 15;
+            this.btnAdicionarProducto.Text = "Adicionar Producto";
+            this.btnAdicionarProducto.UseVisualStyleBackColor = true;
+            this.btnAdicionarProducto.Click += new System.EventHandler(this.btnAdicionarProducto_Click);
+            // 
+            // dgvListarProductos
+            // 
+            this.dgvListarProductos.AllowUserToAddRows = false;
+            this.dgvListarProductos.AllowUserToDeleteRows = false;
+            this.dgvListarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Producto,
+            this.Cantidad,
+            this.Valor});
+            this.dgvListarProductos.Enabled = false;
+            this.dgvListarProductos.Location = new System.Drawing.Point(41, 211);
+            this.dgvListarProductos.Name = "dgvListarProductos";
+            this.dgvListarProductos.ReadOnly = true;
+            this.dgvListarProductos.Size = new System.Drawing.Size(514, 150);
+            this.dgvListarProductos.TabIndex = 16;
+            // 
+            // Producto
+            // 
+            this.Producto.DataPropertyName = "NombreProducto";
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "Valor";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 450);
+            this.Controls.Add(this.dgvListarProductos);
+            this.Controls.Add(this.btnAdicionarProducto);
             this.Controls.Add(this.cbCliente);
             this.Controls.Add(this.txtValorTotal);
             this.Controls.Add(this.txtFecha);
@@ -223,6 +255,7 @@
             this.Text = "Factura";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,9 +277,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mNuevo;
         private System.Windows.Forms.ToolStripMenuItem mGuardar;
-        private System.Windows.Forms.ToolStripMenuItem mFacturar;
-        private System.Windows.Forms.ToolStripMenuItem mAnular;
-        private System.Windows.Forms.ToolStripMenuItem mConsultar;
         private System.Windows.Forms.ComboBox cbCliente;
+        private System.Windows.Forms.Button btnAdicionarProducto;
+        private System.Windows.Forms.DataGridView dgvListarProductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
     }
 }

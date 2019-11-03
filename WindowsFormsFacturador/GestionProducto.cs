@@ -51,10 +51,8 @@ namespace WindowsFormsFacturador
             ProductoEntidad productoEntidad = new ProductoEntidad();
             productoEntidad.CodigoProducto = txtCodigoProducto.Text;
             productoEntidad.Detalle = txtDetalle.Text;
-            productoEntidad.Precio = Convert.ToDecimal(txtPrecio.Text);
-            productoEntidad.Existencia = Convert.ToInt32(txtExistencia.Text);
+            productoEntidad.Precio = Convert.ToDecimal(txtPrecio.Text);        
             
-
             try
             {
                 ProductoReglaNegocio productoReglaNegocio = new ProductoReglaNegocio();
@@ -90,8 +88,7 @@ namespace WindowsFormsFacturador
 
         private void LimpiarDatos() {
             txtCodigoProducto.Text = string.Empty;
-            txtDetalle.Text = string.Empty;
-            txtExistencia.Text = string.Empty;
+            txtDetalle.Text = string.Empty;            
             txtPrecio.Text = string.Empty;
         }
 
@@ -138,29 +135,6 @@ namespace WindowsFormsFacturador
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtExistencia.Text))
-            {
-                MessageBox.Show("Favor diligenciar la Existencia.");
-                txtExistencia.Focus();
-                return false;
-            }
-
-            int valorEntero;
-
-            if (!int.TryParse(txtExistencia.Text, out valorEntero))
-            {
-                MessageBox.Show("La existencia debe ser un número entero.");
-                txtExistencia.Focus();
-                return false;
-            }
-
-            if (valorEntero<0)
-            {
-                MessageBox.Show("La existencia debe ser un entero positivo.");
-                txtExistencia.Focus();
-                return false;
-            }
-
             return true;
         }
 
@@ -176,8 +150,7 @@ namespace WindowsFormsFacturador
             }
 
             txtCodigoProducto.Text = productoConsultado.CodigoProducto;
-            txtDetalle.Text = productoConsultado.Detalle;
-            txtExistencia.Text = productoConsultado.Existencia.ToString();
+            txtDetalle.Text = productoConsultado.Detalle;           
             txtPrecio.Text = productoConsultado.Precio.ToString();
             chkActivo.Checked = productoConsultado.Activo;
         }

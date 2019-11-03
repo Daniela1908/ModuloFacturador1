@@ -33,7 +33,6 @@ namespace AccesoDatos
                     producto.CodigoProducto = sqlDataReader["Codigoproducto"].ToString();
                     producto.Detalle = sqlDataReader["Detalle"].ToString();
                     producto.Precio = Convert.ToDecimal(sqlDataReader["Precio"]);
-                    producto.Existencia = Convert.ToInt32(sqlDataReader["Existencia"]);
                     producto.Activo = Convert.ToBoolean(sqlDataReader["Activo"]);
 
                     listaProductos.Add(producto);
@@ -55,19 +54,16 @@ namespace AccesoDatos
                 SqlParameter sqlParameterCodigoProducto = new SqlParameter("@CodigoProducto", SqlDbType.VarChar);
                 SqlParameter sqlParameterDetalle = new SqlParameter("@Detalle", SqlDbType.VarChar);
                 SqlParameter sqlParameterPrecio = new SqlParameter("@Precio", SqlDbType.Decimal);
-                SqlParameter sqlParameterExistencia = new SqlParameter("@Existencia", SqlDbType.Int);
                 SqlParameter sqlParameterActivo = new SqlParameter("@Activo", SqlDbType.Bit);
 
                 sqlParameterCodigoProducto.Value = productoEntidad.CodigoProducto;
                 sqlParameterDetalle.Value = productoEntidad.Detalle;
                 sqlParameterPrecio.Value = productoEntidad.Precio;
-                sqlParameterExistencia.Value = productoEntidad.Existencia;
                 sqlParameterActivo.Value = productoEntidad.Activo;
 
                 comando.Parameters.Add(sqlParameterCodigoProducto);
                 comando.Parameters.Add(sqlParameterDetalle);
                 comando.Parameters.Add(sqlParameterPrecio);
-                comando.Parameters.Add(sqlParameterExistencia);
                 comando.Parameters.Add(sqlParameterActivo);
 
                 conexion.Open();
@@ -110,7 +106,6 @@ namespace AccesoDatos
                     productoConsultado.CodigoProducto = sqlDataReader["Codigoproducto"].ToString();
                     productoConsultado.Detalle = sqlDataReader["Detalle"].ToString();
                     productoConsultado.Precio = Convert.ToDecimal(sqlDataReader["Precio"]);
-                    productoConsultado.Existencia = Convert.ToInt32(sqlDataReader["Existencia"]);
                     productoConsultado.Activo = Convert.ToBoolean(sqlDataReader["Activo"]);
 
                     return productoConsultado;
@@ -132,19 +127,16 @@ namespace AccesoDatos
                 SqlParameter sqlParameterCodigoProducto = new SqlParameter("@CodigoProducto", SqlDbType.VarChar);
                 SqlParameter sqlParameterDetalle = new SqlParameter("@Detalle", SqlDbType.VarChar);
                 SqlParameter sqlParameterPrecio = new SqlParameter("@Precio", SqlDbType.Decimal);
-                SqlParameter sqlParameterExistencia = new SqlParameter("@Existencia", SqlDbType.Int);
                 SqlParameter sqlParameterActivo = new SqlParameter("@Activo", SqlDbType.Bit);
 
                 sqlParameterCodigoProducto.Value = productoEntidad.CodigoProducto;
                 sqlParameterDetalle.Value = productoEntidad.Detalle;
                 sqlParameterPrecio.Value = productoEntidad.Precio;
-                sqlParameterExistencia.Value = productoEntidad.Existencia;
                 sqlParameterActivo.Value = productoEntidad.Activo;
 
                 comando.Parameters.Add(sqlParameterCodigoProducto);
                 comando.Parameters.Add(sqlParameterDetalle);
                 comando.Parameters.Add(sqlParameterPrecio);
-                comando.Parameters.Add(sqlParameterExistencia);
                 comando.Parameters.Add(sqlParameterActivo);
 
                 conexion.Open();
@@ -158,6 +150,36 @@ namespace AccesoDatos
             }
 
             return false;
+        }
+
+        public List<ProductoEntidad> ObtenerProductosActivos()
+        {
+            using (SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString))
+            {
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = "ObtenerProductosActivos";
+
+                conexion.Open();
+
+                SqlDataReader sqlDataReader = comando.ExecuteReader();
+
+                List<ProductoEntidad> listaProductosActivos = new List<ProductoEntidad>();
+
+                while (sqlDataReader.Read())
+                {
+                    ProductoEntidad producto = new ProductoEntidad();
+                    producto.CodigoProducto = sqlDataReader["CodigoProducto"].ToString();
+                    producto.Detalle = sqlDataReader["Detalle"].ToString();
+                    producto.Precio = Convert.ToDecimal(sqlDataReader["Precio"]);
+                    producto.Activo = Convert.ToBoolean(sqlDataReader["Activo"]);
+
+                    listaProductosActivos.Add(producto);
+                }
+
+                return listaProductosActivos;
+            }
         }
     }
 }

@@ -32,12 +32,10 @@
             this.lblCodigoproducto = new System.Windows.Forms.Label();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblExistencia = new System.Windows.Forms.Label();
             this.lblActivo = new System.Windows.Forms.Label();
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.txtDetalle = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.txtExistencia = new System.Windows.Forms.TextBox();
             this.chkActivo = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,19 +67,10 @@
             this.lblPrecio.TabIndex = 2;
             this.lblPrecio.Text = "Precio";
             // 
-            // lblExistencia
-            // 
-            this.lblExistencia.AutoSize = true;
-            this.lblExistencia.Location = new System.Drawing.Point(40, 168);
-            this.lblExistencia.Name = "lblExistencia";
-            this.lblExistencia.Size = new System.Drawing.Size(55, 13);
-            this.lblExistencia.TabIndex = 3;
-            this.lblExistencia.Text = "Existencia";
-            // 
             // lblActivo
             // 
             this.lblActivo.AutoSize = true;
-            this.lblActivo.Location = new System.Drawing.Point(40, 207);
+            this.lblActivo.Location = new System.Drawing.Point(40, 167);
             this.lblActivo.Name = "lblActivo";
             this.lblActivo.Size = new System.Drawing.Size(37, 13);
             this.lblActivo.TabIndex = 4;
@@ -108,17 +97,10 @@
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 7;
             // 
-            // txtExistencia
-            // 
-            this.txtExistencia.Location = new System.Drawing.Point(151, 165);
-            this.txtExistencia.Name = "txtExistencia";
-            this.txtExistencia.Size = new System.Drawing.Size(100, 20);
-            this.txtExistencia.TabIndex = 8;
-            // 
             // chkActivo
             // 
             this.chkActivo.AutoSize = true;
-            this.chkActivo.Location = new System.Drawing.Point(151, 207);
+            this.chkActivo.Location = new System.Drawing.Point(151, 167);
             this.chkActivo.Name = "chkActivo";
             this.chkActivo.Size = new System.Drawing.Size(15, 14);
             this.chkActivo.TabIndex = 9;
@@ -126,7 +108,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(43, 267);
+            this.btnGuardar.Location = new System.Drawing.Point(43, 227);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 10;
@@ -141,12 +123,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.chkActivo);
-            this.Controls.Add(this.txtExistencia);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtDetalle);
             this.Controls.Add(this.txtCodigoProducto);
             this.Controls.Add(this.lblActivo);
-            this.Controls.Add(this.lblExistencia);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblDetalle);
             this.Controls.Add(this.lblCodigoproducto);
@@ -163,12 +143,10 @@
         private System.Windows.Forms.Label lblCodigoproducto;
         private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblExistencia;
         private System.Windows.Forms.Label lblActivo;
         private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.TextBox txtDetalle;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtExistencia;
         private System.Windows.Forms.CheckBox chkActivo;
         private System.Windows.Forms.Button btnGuardar;
     }

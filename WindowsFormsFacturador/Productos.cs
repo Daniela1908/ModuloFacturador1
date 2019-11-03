@@ -48,7 +48,7 @@ namespace WindowsFormsFacturador
 
                 if (dataGridView.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
                 {
-                    if (e.ColumnIndex == 5)
+                    if (e.ColumnIndex == 4)
                     {
                         // EDITAR
                         string codigoProducto = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();

@@ -29,6 +29,7 @@ namespace WindowsFormsFacturador
             LimpiarCampos();     
             txtUsuario.Text = this.usuarioLogueado.Nombre;
             cbCliente.Enabled = true;
+            mGuardar.Enabled = true;
         }
 
         private void LimpiarCampos()
@@ -49,8 +50,6 @@ namespace WindowsFormsFacturador
             cbCliente.DataSource = clientesActivos;
             cbCliente.DisplayMember = "Nombre";
             cbCliente.ValueMember = "Documento";
-
-
         }
 
         private void mGuardar_Click(object sender, EventArgs e)
@@ -80,8 +79,38 @@ namespace WindowsFormsFacturador
 
             txtNumeroFactura.Text = facturaEntidad.NumeroFactura;
             txtEstado.Text = facturaEntidad.Estado.ToString();
-            txtFecha.Text = facturaEntidad.Fecha.ToString();      
+            txtFecha.Text = facturaEntidad.Fecha.ToString();
+            cbCliente.Enabled = false;
+            mGuardar.Enabled = false;
+            btnAdicionarProducto.Enabled = true;
+            dgvListarProductos.Enabled = true;
 
+        }
+
+        private void btnAdicionarProducto_Click(object sender, EventArgs e)
+        {
+            ProductoFactura productoFactura = new ProductoFactura(Convert.ToInt32(txtNumeroFactura.Text));
+            productoFactura.ShowDialog();
+            CargarProductosFactura();
+        }
+
+        private void CargarProductosFactura()
+        {
+            if (string.IsNullOrWhiteSpace(txtNumeroFactura.Text))
+            {
+                return;
+            }
+
+            int numeroFactura = Convert.ToInt32(txtNumeroFactura.Text);
+
+            dgvListarProductos.AutoGenerateColumns = false;
+            DetalleFacturaReglaNegocio detalleFacturaReglaNegocio = new DetalleFacturaReglaNegocio();
+            List<ProductoFacturaEntidad> listaProductosFactura= detalleFacturaReglaNegocio.ObtenerProductosFactura(numeroFactura);
+            dgvListarProductos.DataSource= listaProductosFactura;
+
+            decimal valorTotal = (from p in listaProductosFactura
+            select p.Valor).Sum();
+            txtValorTotal.Text = valorTotal.ToString();
         }
     }
 }

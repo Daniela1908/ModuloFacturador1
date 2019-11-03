@@ -33,5 +33,11 @@ namespace LogicaNegocio
             ProductoAccesoDatos productoAccesoDatos = new ProductoAccesoDatos();
             return productoAccesoDatos.ModificarProducto(productoEntidad);
         }
+
+        public List<ProductoEntidad> ObtenerProductosActivos()
+        {
+            ProductoAccesoDatos productoAccesoDatos = new ProductoAccesoDatos();
+            return productoAccesoDatos.ObtenerProductosActivos();
+        }
     }
 }
