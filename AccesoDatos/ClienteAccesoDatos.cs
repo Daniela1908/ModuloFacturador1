@@ -169,6 +169,34 @@ namespace AccesoDatos
 
             return false;
         }
+
+        public List<ClienteEntidad> ObtenerClientesActivos()
+        {
+            using (SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString))
+            {
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = "ObtenerClientesActivos";
+
+                conexion.Open();
+
+                SqlDataReader sqlDataReader = comando.ExecuteReader();
+
+                List<ClienteEntidad> listaClientesActivos = new List<ClienteEntidad>();
+
+                while (sqlDataReader.Read())
+                {
+                    ClienteEntidad cliente = new ClienteEntidad();
+                    cliente.Documento = sqlDataReader["Documento"].ToString();
+                    cliente.Nombre = sqlDataReader["Nombre"].ToString();
+                    
+                    listaClientesActivos.Add(cliente);
+                }
+
+                return listaClientesActivos;
+            }
+        }
     }  
 }
 

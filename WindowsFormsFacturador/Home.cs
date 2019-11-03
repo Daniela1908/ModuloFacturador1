@@ -34,5 +34,11 @@ namespace WindowsFormsFacturador
             Clientes clientes = new Clientes();
             clientes.Show();
         }
+
+        private void btnFacturador_Click(object sender, EventArgs e)
+        {
+            Factura factura = new Factura(usuarioLogueado);
+            factura.Show();
+        }
     }
 }

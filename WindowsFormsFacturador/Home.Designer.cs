@@ -55,6 +55,7 @@
             this.btnFacturador.TabIndex = 1;
             this.btnFacturador.Text = "Facturador";
             this.btnFacturador.UseVisualStyleBackColor = true;
+            this.btnFacturador.Click += new System.EventHandler(this.btnFacturador_Click);
             // 
             // btnProductos
             // 

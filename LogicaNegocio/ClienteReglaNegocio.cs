@@ -34,5 +34,12 @@ namespace LogicaNegocio
             ClienteAccesoDatos clienteAccesoDatos = new ClienteAccesoDatos();
             return clienteAccesoDatos.ModificarCliente(clienteEntidad);
         }
+
+        public List<ClienteEntidad> ObtenerClientesActivos()
+        {
+            ClienteAccesoDatos clienteAccesoDatos = new ClienteAccesoDatos();
+            return clienteAccesoDatos.ObtenerClientesActivos();
+            
+        }
     }
 }

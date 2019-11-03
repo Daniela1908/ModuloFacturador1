@@ -152,7 +152,7 @@
             this.Controls.Add(this.lblCodigoproducto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GestionProducto";
-            this.Text = "GestionProducto";
+            this.Text = "Gestión Producto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

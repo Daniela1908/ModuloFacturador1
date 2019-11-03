@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteEntidad.cs" />
+    <Compile Include="EstadosFactura.cs" />
+    <Compile Include="FacturaEntidad.cs" />
     <Compile Include="LoginEntidad.cs" />
     <Compile Include="ProductoEntidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
